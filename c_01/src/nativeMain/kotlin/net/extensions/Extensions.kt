@@ -1,6 +1,12 @@
 package net.extensions
 
 val Any.javaClass: String? get() {return this::class.simpleName}
+public fun String?.isEmptyOrNull()= this == null || this.isEmpty()
+public infix fun<T> T.eq(other:T){
+    if(this == other) println("Esit")
+    else println("Esit degil")
+}
+
 
 fun List<Int>.sum(): Int {
     var sum = 0;
